@@ -1,3 +1,4 @@
+import multiprocessing
 import multiprocessing_task
 import threading_task
 import async_task
@@ -24,7 +25,7 @@ def main():
     # Step 5: Run async tasks
     print("Running async I/O tasks...")
     import asyncio
-    asyncio.run(async_task.run_async_tasks())
+    asyncio.run(async_task.run_async_tasks(primes))
 
 if __name__ == "__main__":
     main()
